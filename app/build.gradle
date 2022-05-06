@@ -1,0 +1,96 @@
+plugins {
+    id 'com.android.application'
+//    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+    // For translate
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        configurations.all {
+            resolutionStrategy { force 'androidx.core:core:1.6.0' }
+            exclude group: 'com.android.support'
+        }
+
+        applicationId "com.keane9301.myapp001"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+
+    // Room components
+    implementation 'androidx.room:room-runtime:2.3.0'
+    implementation 'org.jetbrains:annotations:23.0.0'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
+    annotationProcessor "androidx.room:room-compiler:2.3.0"
+    androidTestImplementation "androidx.room:room-testing:2.3.0"
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.3.0"
+    implementation "androidx.lifecycle:lifecycle-livedata:2.3.0"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.3.0"
+//    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
+
+    // Photo view zoom handler and biometric
+    implementation 'com.commit451:PhotoView:1.2.4'
+    implementation 'androidx.biometric:biometric:1.0.1'
+
+    // For arrayList converter in Android Room (Not in use)
+//    implementation "android.arch.persistence.room:runtime:1.0.0-alpha3"
+//    annotationProcessor "android.arch.persistence.room:compiler:1.0.0-alpha3"
+//    implementation 'com.google.code.gson:gson:2.6.2'
+
+    // Same description as above (Not in use)
+//    implementation "android.arch.persistence.room:runtime:1.0.0"
+//    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
+
+    // Google Maps
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+//    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
+//    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+
+    // Translator 
+//    implementation ('com.github.vbauer:yandex-translate-api:1.4.2'){
+//        exclude group: 'com.google.code.findbugs', module:'annotations'}
+//    implementation files('libs\\microsoft-translator-java-api-0.6.2-jar-with-
+
+}

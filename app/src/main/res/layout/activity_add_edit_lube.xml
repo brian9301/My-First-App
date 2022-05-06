@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.AddEditLube">
+
+    <TextView
+        android:id="@+id/addEditTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/fill_in"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/addEditHint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/hint_fill"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addEditTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="397dp"
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addEditHint">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="68dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/brandTitleView"
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:text="@string/brand"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/brandTextEditView"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="3"
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:text="@string/brand_field"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/modelTitleView"
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:text="@string/model"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/modelTextEditView"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="3"
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:text="@string/model_field"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TableRow
+                android:id="@+id/tableRow"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/gradeTitleView"
+                    android:layout_width="98dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:text="@string/grade"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/gradeTextEditView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="7"
+                    android:ems="10"
+                    android:inputType="textLongMessage|textCapWords"
+                    android:singleLine="true"
+                    android:text="@string/grade_field"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/viscosityTitleField"
+                    android:layout_width="86dp"
+                    android:layout_height="25dp"
+                    android:text="@string/viscosity"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/viscosityTextEditView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="textCapSentences|textEmailAddress|textCapWords|textCapCharacters"
+                    android:text="@string/viscosity_field"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/locationTitleField"
+                    android:layout_width="89dp"
+                    android:layout_height="25dp"
+                    android:text="@string/location"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/locationTextEditView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textMultiLine|textCapSentences|textCapWords"
+                    android:text="@string/location_field"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/oePartNumberTitle"
+                    android:layout_width="138dp"
+                    android:layout_height="25dp"
+                    android:text="@string/oe_part_number"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/oePartNumberTextEditView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="textCapSentences|textCapWords|textCapCharacters"
+                    android:text="@string/oe_part_number_field"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableLayout
+                android:id="@+id/tableLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="136dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/contentTitleField"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:text="@string/content"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/contentTextEditView"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:inputType="text|textCapWords"
+                            android:text="@string/content_field"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/profitTitleField"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:text="@string/profit"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/profitTextEditView"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:inputType="number|numberDecimal"
+                            android:text="@string/profit_field"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/costTitleField"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:text="@string/cost"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/costTextEditView"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:inputType="number|numberDecimal"
+                            android:text="@string/cost_field"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/sellTitleField"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp"
+                            android:layout_weight="1"
+                            android:text="@string/sell"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/sellTextEditView"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:text="@string/sell_field"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </TableRow>
+
+            </TableLayout>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/noteTitle"
+                    android:layout_width="90dp"
+                    android:layout_height="25dp"
+                    android:text="@string/note"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/noteTextEditView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textMultiLine|textPersonName|textCapSentences|textEmailAddress|textCapWords"
+                    android:text="@string/note_field"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="174dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/galleryImageButton"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ic_menu_gallery" />
+
+                    <ImageButton
+                        android:id="@+id/cameraImageButton"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        app:srcCompat="@drawable/ic_menu_camera" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/lubeAddEditImageView"
+                        android:layout_width="154dp"
+                        android:layout_height="161dp"
+                        app:srcCompat="@drawable/ic_menu_gallery" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

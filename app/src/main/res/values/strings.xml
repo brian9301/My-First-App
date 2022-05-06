@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">My App 001</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_backup">Backup Database</string>
+    <string name="action_restore">Restore Database</string>
+
+    <string name="nav_header_title_custom">SK Android Dev</string>
+    <string name="nav_header_subtitle_custom">briankeane68@gmail.com</string>
+
+    <string name="menu_home">Home</string>
+    <string name="lube_list">Lubes</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="part_list">Parts</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="contact_list">Contacts</string>
+
+    <string name="add_customer">Add A New Customer:</string>
+    <string name="add_customer_hint">Please provide some information related to the customer for future reference.</string>
+    <string name="view_customer">Additional Info of the Selected Customer</string>
+    <string name="view_hint_customer">To change any information displayed, please click on the edit button and login. To delete this customer, click delete and login.</string>
+
+    <string name="customer_name">Name: </string>
+    <string name="customer_name_field">""</string>
+    <string name="customer_identification">I/C Number: </string>
+    <string name="customer_identification_field">""</string>
+    <string name="customer_shop">Shop Name: </string>
+    <string name="customer_shop_field">""</string>
+    <string name="customer_registration">SSM Registration: </string>
+    <string name="customer_registration_field">""</string>
+    <string name="customer_address">Address: </string>
+    <string name="customer_address_field">""</string>
+    <string name="customer_location">Location: </string>
+    <string name="customer_location_field">""</string>
+    <string name="customer_number">Phone Number: </string>
+    <string name="customer_number_field">""</string>
+    <string name="customer_number_alternative">Phone Number (Alt): </string>
+    <string name="customer_number_alternative_field">""</string>
+
+
+    <string name="fill_in">Adding A New Item:</string>
+    <string name="hint_fill">Please provide all related information as required and click save.</string>
+
+    <string name="selected_item">Additional Info Of The Item:</string>
+    <string name="hint_action">Click edit or delete button for each respective action. Press back to go back to previous screen.</string>
+
+    <string name="edit_form">Edit Selected Item:</string>
+    <string name="edit_hint">Edit the desire field and click save once done.</string>
+
+    <string name="backup_tips">To backup all your database, click the backup button.</string>
+    <string name="backup_location">All backup files can be found in your local storage under Documents/Database Backup</string>
+    <string name="backup_permission">Make sure you allow the app to write onto your storage for backup to work.</string>
+
+    <string name="restore_tips">To repopulate your database, click the restore button.</string>
+    <string name="restore_location">Make sure that there are files ready to be restorer under Documents/Database Backup</string>
+    <string name="restore_permission">Please allow the app to read and write your local storage in order for database to be successfully restored.</string>
+    <string name="restore_files">Make sure you have the filename: lube_database, lube_database.shm, lube_database.wal, part_database, part_database.shm,
+        part_database.wal, customer_database, customer_database.shm and customer_database.wal available in the folder to prevent errors in restoring.
+        In short, you need to have a total of 9 files.</string>
+
+    <string name="backup">Backup</string>
+    <string name="restore">Restore</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="list">List</string>
+
+
+    <string name="application">Application: </string>
+    <string name="application_field">""</string>
+    <string name="category">Category: </string>
+    <string name="category_field">""</string>
+    <string name="sub_category">Sub-Category: </string>
+    <string name="sub_category_field">""</string>
+    <string name="condition">Condition: </string>
+    <string name="condition_field">""</string>
+    <string name="position">Position: </string>
+    <string name="position_field">""</string>
+    <string name="size">Size/Specs: </string>
+    <string name="size_field">""</string>
+    <string name="supplier">Supplier: </string>
+    <string name="supplier_field">""</string>
+    <string name="part_number">Part Number: </string>
+    <string name="part_number_field">""</string>
+    <string name="part_number_alternative">Part Number (Alt): </string>
+    <string name="part_number_alternative_field">""</string>
+    <string name="part_warranty">Warranty: </string>
+    <string name="part_warranty_field">""</string>
+
+
+    <string name="brand">Brand:  </string>
+    <string name="brand_field">""</string>
+    <string name="brand_edit">""</string>
+    <string name="location">Location:  </string>
+    <string name="location_field">""</string>
+    <string name="location_edit">""</string>
+    <string name="cost">Cost:  </string>
+    <string name="cost_field">""</string>
+    <string name="cost_edit">""</string>
+    <string name="sell">Sell:  </string>
+    <string name="sell_field">""</string>
+    <string name="sell_edit">""</string>
+    <string name="profit">Profit:  </string>
+    <string name="profit_field">""</string>
+    <string name="profit_edit">""</string>
+    <string name="oe_part_number">OE Part Number: </string>
+    <string name="oe_part_number_field">""</string>
+    <string name="note">Note: </string>
+    <string name="note_field">""</string>
+
+    <string name="last_modified">Last Modified: </string>
+    <string name="last_modified_field">""</string>
+
+
+    <string name="model">Model:  </string>
+    <string name="model_field">""</string>
+    <string name="model_edit">""</string>
+    <string name="viscosity">Viscosity:  </string>
+    <string name="viscosity_field">""</string>
+    <string name="viscosity_edit">""</string>
+    <string name="grade">Grade:  </string>
+    <string name="grade_field">""</string>
+    <string name="grade_edit">""</string>
+    <string name="content">Content:  </string>
+    <string name="content_field">""</string>
+    <string name="content_edit">""</string>
+    <string name="enter_details">Enter details</string>
+    <string name="title_activity_maps">Map</string>
+
+
+</resources>
